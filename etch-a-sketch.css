@@ -1,0 +1,76 @@
+#container {
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100vh;
+}
+
+#one {
+    border: 1px solid #fff;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+#two {
+    border: 1px solid #fff;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+#three {
+    border: 1px solid #fff;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+#four {
+    border: 1px solid #fff;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.row1 {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    width: 25%;
+}
+.row2 {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    width: 25%;
+}
+.row3 {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    width: 25%;
+}
+.row4 {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    width: 25%;
+}
+
+
+.row1:hover {
+    background-color: yellow;
+}
+.row2:hover {
+    background-color: olive;
+}
+.row3:hover {
+    background-color: #B22222;
+}
+.row4:hover {
+    background-color: #483D8B;
+}
