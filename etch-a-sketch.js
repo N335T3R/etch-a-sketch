@@ -26,5 +26,30 @@ function makeDivs() {
     }
 }
 
+
 makeDivs();
+
+const div1 = document.querySelector("row1");
+const div2 = document.querySelector("row2");
+const div3 = document.querySelector("row3");
+const div4 = document.querySelector("row4");
+
+let a = 0;
+
+function opacity (div) {
+    a++;
+
+    if (a === 1) {
+        div.classList.toggle("t1");
+    } else if (a == 2) {
+        div.classList.toggle("t2");
+    } else if (a == 3) {
+        div.classList.toggle("t3");
+    }
+}
+
+div1.addEventListener("mouseover", opacity(div1));
+div2.addEventListener("mousover", opacity(div2));
+div3.addEventListener("mouseover", opacity(div3));
+div4.addEventListener("mouseover", opacity(div4));
 
