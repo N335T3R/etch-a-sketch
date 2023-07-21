@@ -1,55 +1,92 @@
+//# of rows = user input
 const container = document.querySelector("#container");
-const row1 = document.querySelector("#one");
-const row2 = document.querySelector("#two");
-const row3 = document.querySelector("#three");
-const row4 = document.querySelector("#four");
+let i = prompt("How many squares");
+let rows = [];
+totalSquare = 900;
 
-
-function makeDivs() {
-    for (i = 0; i < 16; i++)
-    {
-       const div = document.createElement('div');
- 
-       if (i < 4 ) {
-        div.setAttribute("class", "row1")
-        row1.appendChild(div);
-       } else if (i < 8) {
-        div.setAttribute("class", "row2")
-        row2.appendChild(div);
-       } else if (i < 12) {
-        div.setAttribute("class", "row3")
-        row3.appendChild(div);
-       } else if (i < 16) {
-        div.setAttribute("class", "row4")
-        row4.appendChild(div);
-       }
-    }
+for (let a = 0; a < i; a++) {
+    rows[a] = document.createElement("div");
+    rows[a].setAttribute("class", "one");
+    rows[a].style.height = totalSquare / i + "px";
+    container.appendChild(rows[a]);
 }
 
 
-makeDivs();
+//# of squares per row = user input
+let divs = [];
 
-const div1 = document.querySelector("row1");
-const div2 = document.querySelector("row2");
-const div3 = document.querySelector("row3");
-const div4 = document.querySelector("row4");
-
-let a = 0;
-
-function opacity (div) {
-    a++;
-
-    if (a === 1) {
-        div.classList.toggle("t1");
-    } else if (a == 2) {
-        div.classList.toggle("t2");
-    } else if (a == 3) {
-        div.classList.toggle("t3");
+function makeDivs(array) {  
+    for (let a = 0; a < i; a++) {
+        divs[a] = document.createElement("div");
+        divs[a].setAttribute("class", "t1");
+        divs[a].style.width = totalSquare / i + "px";
+        array.appendChild(divs[a]);
     }
+};
+
+rows.forEach(makeDivs);
+
+
+//Individualizes squares as array items
+let squares = document.querySelectorAll(".t1");
+
+//Color randomization code
+function changeColor() {
+function getNumber(min, max) {
+    min = Math.ceil(0);
+    max = Math.floor(257);
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
-div1.addEventListener("mouseover", opacity(div1));
-div2.addEventListener("mousover", opacity(div2));
-div3.addEventListener("mouseover", opacity(div3));
-div4.addEventListener("mouseover", opacity(div4));
+let cValues = [];
+
+for (let a = 0; a < 3; a++) {
+    cValues[a] = getNumber();
+}
+
+rgb = "rgb(" + cValues.toString() + ")";
+return rgb;
+}
+
+
+//Opacity and color change applied to squares
+for (let a = 0; a < i * i; a++) {
+    squares[a].addEventListener("mouseenter", function(){
+        let test = squares[a].getAttribute("class");
+
+        if (test == "t1") {
+            squares[a].setAttribute("class", "t2");
+            squares[a].style.backgroundColor = changeColor();
+        } else if (test == "t2") {
+            squares[a].setAttribute("class", "t3");
+            squares[a].style.backgroundColor = changeColor();
+        } else if (test == "t3") {
+            squares[a].setAttribute("class", "t4");
+            squares[a].style.backgroundColor = changeColor();
+        } else if (test == "t4") {
+            squares[a].setAttribute("class", "t5");
+            squares[a].style.backgroundColor = changeColor();
+        } else if (test == "t5") {
+            squares[a].setAttribute("class", "t6");
+            squares[a].style.backgroundColor = changeColor();
+        } else if (test == "t6") {
+            squares[a].setAttribute("class", "t7");
+            squares[a].style.backgroundColor = changeColor();
+        } else if (test == "t7") {
+            squares[a].setAttribute("class", "t8");
+            squares[a].style.backgroundColor = changeColor();
+        } else if (test == "t8") {
+            squares[a].setAttribute("class", "t9");
+            squares[a].style.backgroundColor = changeColor();
+        } else if (test == "t9") {
+            squares[a].setAttribute("class", "t10");
+            squares[a].style.backgroundColor = changeColor();
+        } else if (test =="t10") {
+            squares[a].setAttribute("class", "t11");
+            squares[a].style.backgroundColor = changeColor();
+        }
+        });
+
+}
+
 

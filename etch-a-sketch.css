@@ -1,86 +1,62 @@
 #container {
     display: block;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100vw;
-    height: 100vh;
+    width: 900px;
+    height: 900px;
 }
 
-#one {
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: flex-start;
-}
-#two {
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: flex-start;
-}
-#three {
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: flex-start;
-}
-#four {
-    width: 100%;
-    height: 25%;
+.one {
     display: flex;
     justify-content: flex-start;
 }
 
 
-.row1 {
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    width: 25%;
-}
-.row2 {
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    width: 25%;
-}
-.row3 {
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    width: 25%;
-}
-.row4 {
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    width: 25%;
-}
-
-
-.row1:hover {
-    background-color: #CD853F;
-}
-.row2:hover {
-    background-color: olive;
-}
-.row3:hover {
-    background-color: #B22222;
-}
-.row4:hover {
-    background-color: #483D8B;
-}
-
+/* mousover classRuleset */
 
 .t1 {
     background-color: black;
-    opacity: 0.1;
+    opacity: 0;
+}
+.t1:hover {
+    background-color:black;
+    opacity: 1;
 }
 .t2 {
     background-color: black;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 .t3 {
     background-color: black;
-    opacity: 0.75;
+    opacity: 0.2;
+}
+.t4 {
+    background-color: black;
+    opacity: 0.3;
+}
+.t5 {
+    background-color: black;
+    opacity: 0.4;
+}
+.t6 {
+    background-color: black;
+    opacity: 0.5;
+}
+.t7 {
+    background-color: black;
+    opacity: 0.6;
+}
+.t8 {
+    background-color: black;
+    opacity: 0.7;
+}
+.t9 {
+    background-color: black;
+    opacity: 0.8;
+}
+.t10 {
+    background-color: black;
+    opacity: 0.9;
+}
+.t11 {
+    background-color: black;
+    opacity: 1;
 }
